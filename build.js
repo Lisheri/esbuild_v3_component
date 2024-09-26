@@ -45,9 +45,8 @@ const buildTimePlugin = (startTime) => {
 };
 
 const getReflectPath = () => path.resolve(__dirname, './src');
-// 打包组件库
+// build component library
 async function buildLibrary() {
-  // 全量打包
   await build({
     entryPoints: ['./src/*.ts'],
     outdir: 'es',
@@ -85,7 +84,7 @@ async function buildLibrary() {
       sassPlugin({
         sourceMap: true,
         sassOptions: {
-          outputStyle: 'compressed', // 'compressed' 会移除注释
+          outputStyle: 'compressed',
           sourceMap: true
         }
       }),
