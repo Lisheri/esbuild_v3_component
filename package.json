@@ -6,15 +6,7 @@
   "module": "es/index.js",
   "type": "module",
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max-old-space-size=4096\" NODE_ENV=development vite build --watch --mode development",
-    "start:turbo": "vite build --watch",
-    "build": "NODE_ENV=production vite build",
-    "build-component:test": "NODE_ENV=production vite build",
-    "build-component:prod": "NODE_ENV=production vite build",
-    "build:dev": "NODE_ENV=development vite build",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
-    "build:devWatch": "rm -rf ./es && NODE_ENV=development node script/dev.build.js --input-type=module --mode development",
+    "build": "node ./build.js --jsx-factory=h --loader=jsx",
     "tsup:build": "tsup src/index.ts --config tsup.config.ts",
     "vant:build": "vant-cli build"
   },
