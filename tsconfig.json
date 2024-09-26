@@ -22,7 +22,7 @@
     "importHelpers": true,
     "useDefineForClassFields": true,
     "lib": ["esnext", "DOM"],
-    "types": ["unplugin-vue-macros/macros-global"],
+    "types": ["unplugin-vue-macros/macros-global", "ant-design-vue"],
     "ignoreDeprecations": "5.0",
     "noImplicitOverride": true,
     "useUnknownInCatchVariables": false,
@@ -31,13 +31,15 @@
     "declaration": true,
     "outDir": "./es",
     "declarationDir": "./es",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "paths": {
       "@/*": [
         "./src/*"
       ]
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["./src/**/*.ts", "./src/**/*.d.ts", "./src/**/*.tsx", "./src/**/*.vue"],
   "exclude": [
     "node_modules",
   ],
