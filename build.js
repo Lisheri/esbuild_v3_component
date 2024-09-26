@@ -1,10 +1,10 @@
 import { build } from 'esbuild';
 import { fileURLToPath } from 'url';
 import Vue from 'unplugin-vue/esbuild';
-// import VueJsx from 'unplugin-vue-jsx/esbuild';
+import VueJsx from 'unplugin-vue-jsx/esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
 import progress from 'esbuild-plugin-progress';
-// import vueMacros from 'unplugin-vue-macros/esbuild';
+import vueMacros from 'unplugin-vue-macros/esbuild';
 import alias from 'esbuild-plugin-alias';
 import path from 'path';
 import fs from 'fs';
