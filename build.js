@@ -77,11 +77,11 @@ async function buildLibrary() {
       alias({
         '@': getReflectPath()
       }),
-      Vue(),
-      // vueMacros({
-      //   vue: Vue(),
-      //   vueJsx: VueJsx()
-      // }),
+      // Vue(),
+      vueMacros({
+        vue: Vue(),
+        vueJsx: VueJsx()
+      }),
       sassPlugin({
         sourceMap: true,
         sassOptions: {
