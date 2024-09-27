@@ -1,6 +1,6 @@
 import { build } from 'esbuild';
 import { fileURLToPath } from 'url';
-import vuePlugin from 'unplugin-vue/esbuild';
+import Vue from 'unplugin-vue/esbuild';
 import VueJsx from 'unplugin-vue-jsx/esbuild';
 import { sassPlugin } from 'esbuild-sass-plugin';
 import progress from 'esbuild-plugin-progress';
@@ -77,10 +77,11 @@ async function buildLibrary() {
       alias({
         '@': getReflectPath()
       }),
-      vueMacros({
-        vue: vuePlugin(),
-        vueJsx: VueJsx()
-      }),
+      Vue(),
+      // vueMacros({
+      //   vue: Vue(),
+      //   vueJsx: VueJsx()
+      // }),
       sassPlugin({
         sourceMap: true,
         sassOptions: {
